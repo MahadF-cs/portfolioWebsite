@@ -7,22 +7,20 @@ export const seo = {
 
 export const data = [
   {
-    title: "Your title",
+    company: "IBM",
+    title: "Software Developer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
-    image: "/code-review-bro.png",
+      "I streamlined the development process by automating testing and deployment, resulting in faster identification of defects and increased developer productivity. I also improved code coverage by using various tools for end-to-end testing and streamlined data storage through redesigning internal APIs.",
+    image:
+      "https://mahad-farah-portfolio.nyc3.digitaloceanspaces.com/images/IBM_logo.svg.png",
   },
   {
-    title: "Your title",
+    company: "Onguard Secure",
+    title: "Software Engineer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
-    image: "/code-review-bro.png",
-  },
-  {
-    title: "Your title",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla tempora dolorem doloribus repudiandae, possimus quod quas. Ipsum culpa repellat dolorem vero odit iste delectus id, sed iure facere, animi suscipit.",
-    image: "/code-review-bro.png",
+      "I played a role in the redesign of our company website, which now features a user-friendly interface that makes it easy for visitors to contact us and learn about our services. As a result of these efforts, our online presence and customer engagement has improved. Additionally, I implemented automation systems that streamlined check-ins with on-site guards, resulting in increased efficiency and cost savings for the company.",
+    image:
+      "https://mahad-farah-portfolio.nyc3.digitaloceanspaces.com/images/onguard-logojpg",
   },
 ];
 

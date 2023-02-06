@@ -4,9 +4,12 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  Image,
+  Highlight,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
+import Typewriter from "typewriter-effect";
 
 import { seo, data } from "config";
 
@@ -20,24 +23,6 @@ const Home = () => {
 
   return (
     <>
-      <NextSeo
-        title={title}
-        description={description}
-        canonical={seo.canonical}
-        openGraph={{
-          title,
-          description,
-          images: [
-            {
-              url: `${seo.canonical}bighead.svg`,
-              width: "350px",
-              height: "350px",
-              alt: "avatar bigheads",
-            },
-          ],
-        }}
-      />
-
       <Box
         as="section"
         d="flex"
@@ -46,39 +31,42 @@ const Home = () => {
         textAlign="center"
         py="4"
       >
-        <NextImage
-          src="/bighead.svg"
+        <Image
+          // change source depending on the color mode
+          src="https://mahad-farah-portfolio.nyc3.digitaloceanspaces.com/images/portrait-dark.JPG"
           width="350"
           height="350"
           alt="avatar bigheads"
           placeholder="blur"
           blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
           priority
+          // make it a circle
+          borderRadius="full"
         />
         <Box>
           <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
-            Hi, I'm John Doe{" "}
+            Hi, I'm Mahad{" "}
             <span role="img" aria-label="hand">
-              👋🏻
+              👋🏿
             </span>
           </Heading>
           <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
+            Bringing{" "}
             <Text as="span" color={color}>
-              Building
+              Ideas
             </Text>{" "}
-            digital products, Brands, And experience.
+            to life with code.
           </Heading>
           <Text py="4">
             A{" "}
             <Text as="span" fontWeight="600">
-              web designer
+              full-stack
             </Text>{" "}
             and{" "}
             <Text as="span" fontWeight="600">
-              front-end web developer
+              and devops engineer
             </Text>{" "}
-            based in the US, I specialize in UI/UX design, Responsive web
-            design, And accessibility.
+            based in the Toronto, I specialize in python and javascript.
           </Text>
           <Button
             colorScheme="telegram"
@@ -86,7 +74,7 @@ const Home = () => {
             size="lg"
             fontSize="20px"
           >
-            Get in touch
+            <a href="mailto:me@mahadfarah.tech">Get in touch</a>
           </Button>
         </Box>
       </Box>
@@ -99,10 +87,26 @@ const Home = () => {
         textAlign={{ base: "center", lg: "left" }}
         py="4"
       >
+        <Heading
+          fontSize={["3xl", "4xl"]}
+          fontWeight="700"
+          // make it underlined
+          _after={{
+            content: '""',
+            display: "block",
+            width: "full",
+            height: "20%",
+            marginTop: "20px",
+            backgroundColor: "telegram.500",
+          }}
+        >
+          Experience
+        </Heading>
         {data.map((item, index) => (
           <Box
             d={{ lg: "flex" }}
             justifyContent={{ lg: "center" }}
+            padding="4"
             alignItems={{ lg: "center" }}
             flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
             key={index}
@@ -112,19 +116,29 @@ const Home = () => {
               mx={{ base: "auto", lg: "0" }}
               pl={{ lg: isOdd(index) == 1 && "10" }}
               pr={{ lg: isOdd(index) == 0 && "10" }}
+              // make image centered in the box
+              display="flex"
+              justifyContent="center"
             >
-              <NextImage
+              <Image
                 src={item.image}
-                width="500"
-                height="500"
                 alt={item.title}
-                placeholder="blur"
-                blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
+                // make image size height 300px but maintain aspect ratio
+                height="300"
+                width="300"
+                objectFit="contain"
+                // add border radious to all corners
+                borderRadius="5%"
+                pb="4"
               />
             </Box>
 
             <Box w={{ lg: "50%" }}>
-              <Heading as="h1">{item.title}</Heading>
+              <Heading as="h2">{item.company}</Heading>
+              <Heading as="h3" fontSize="xl" fontWeight="500" py="2">
+                {item.title}
+              </Heading>
+
               <Text py="4">{item.description}</Text>
             </Box>
           </Box>

@@ -1,5 +1,5 @@
 import { Box, Button, Icon, Link as ChakraLink, Text } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaInstagram, FaCode } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaRegListAlt } from "react-icons/fa";
 
 import { MAX_WIDTH } from "config";
 
@@ -7,7 +7,11 @@ import { MAX_WIDTH } from "config";
 const socialAccounts = [
   { icon: FaGithub, path: "https://github.com/", title: "Github" },
   { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
-  { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
+  {
+    icon: FaRegListAlt,
+    path: "https://mahad-farah-portfolio.nyc3.digitaloceanspaces.com/resume/resume2023-mahadfarah.pdf",
+    title: "Resume",
+  },
 ];
 
 const Footer = () => {
@@ -43,10 +47,6 @@ const Footer = () => {
         <Box py="2">
           <Text>
             Built with{" "}
-            <span role="img" aria-label="red heart">
-              ❤️
-            </span>
-            ,{" "}
             <ChakraLink
               href="https://nextjs.org/"
               fontWeight="600"
@@ -54,8 +54,8 @@ const Footer = () => {
               isExternal
             >
               Next.js
-            </ChakraLink>
-            ,{" "}
+            </ChakraLink>{" "}
+            &{" "}
             <ChakraLink
               href="https://chakra-ui.com/"
               fontWeight="600"
@@ -64,27 +64,17 @@ const Footer = () => {
             >
               Chakra UI
             </ChakraLink>
-            , Hosted in{" "}
+            , Hosted on{" "}
             <ChakraLink
-              href="http://vercel.com/"
+              href="http://digitalocean.com/"
               fontWeight="600"
               _focus={{ outline: "none" }}
               isExternal
             >
-              Vercel.
+              Digital Ocean
             </ChakraLink>
+            {/* make another button with a resume link */}
           </Text>
-        </Box>
-        <Box py="2">
-          <ChakraLink
-            href="https://github.com/imadatyatalah/nextjs-chakra-ui-portfolio-template"
-            aria-label="source code"
-            isExternal
-          >
-            <Button aria-label="source code">
-              <Icon as={FaCode} w="6" h="6" />
-            </Button>
-          </ChakraLink>
         </Box>
       </Box>
     </Box>
