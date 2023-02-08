@@ -12,11 +12,11 @@ import NextImage from "next/image";
 import Typewriter from "typewriter-effect";
 import ReactGA from "react-ga";
 
-import { seo, data } from "config";
-
 // Google Analytics Tracking ID
-const TRACKING_ID = "352903425"; // YOUR_OWN_TRACKING_ID
+const TRACKING_ID = "352903425 "; // YOUR_OWN_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
+
+import { seo, data } from "config";
 
 const Home = () => {
   const color = useColorModeValue("telegram.500", "telegram.400");
