@@ -5,8 +5,12 @@ import { MAX_WIDTH } from "config";
 
 // Fell free to add your social media accounts!
 const socialAccounts = [
-  { icon: FaGithub, path: "https://github.com/", title: "Github" },
-  { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
+  { icon: FaGithub, path: "https://github.com/MahadF-cs", title: "Github" },
+  {
+    icon: FaLinkedin,
+    path: "https://www.linkedin.com/in/mahadfarah/",
+    title: "Linkedin",
+  },
   {
     icon: FaRegListAlt,
     path: "https://mahad-farah-portfolio.nyc3.digitaloceanspaces.com/resume/resume2023-mahadfarah.pdf",
