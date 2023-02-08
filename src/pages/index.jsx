@@ -56,7 +56,7 @@ const Home = () => {
             </span>
           </Heading>
           <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
-            Bringing{" "}
+            I Bring{" "}
             <Text as="span" color={color}>
               Ideas
             </Text>{" "}
@@ -69,7 +69,7 @@ const Home = () => {
             </Text>{" "}
             and{" "}
             <Text as="span" fontWeight="600">
-              and devops engineer
+              devops engineer
             </Text>{" "}
             based in the Toronto, I specialize in python and javascript.
           </Text>
